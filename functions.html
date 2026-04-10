@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+        <script>
+            /*
+               Functions
+               *********
+                 particular business logic called as function
+                                (or)
+                 set of statments also called as function
+                 
+                 functions are used to "reuse" the business logic
+
+                 types
+                 *****
+                 1) function declaration / named functions
+                 2) function expression / anonymous functions
+                 3) arrow functions
+                 4) constructor functions
+                 5) callback functions
+                 6) generator functions 
+                 7) IIFE (Immidiate Invokable Functional Expression)
+                 8) higher order functions
+                 9) pure functions
+
+
+                function declaration / named functions
+                **************************************
+                  function with particular name (user defined name ) called as function declaration / named functions
+                   
+                syntax
+                   function declaration
+                   ********************
+                   function functionname(param1,param2,param3, ......param n){
+                         business logic
+                   }
+                   call the function
+                   ******************
+                   functionname(arg1,arg2,arg3, ......arg n);      
+                   
+                function expression / anonymous functions
+                *****************************************
+                  function without particular name called as function expression / anonymous functions
+
+                syntax
+                   function expression
+                   ********************
+                   let functionname = function(param1,param2,param3, ......param n){
+                         business logic
+                   }
+                   call the function
+                   ******************
+                   functionname(arg1,arg2,arg3, ......arg n);   
+
+
+                arrow function
+                **************
+                  we will represent arrow functions with =>
+                  arrow functions released in ES6 version
+                  arrow functions simplifies the business logic   
+                 
+                syntax
+                   function expression
+                   ********************
+                   let functionname = (param1,param2,param3, ......param n)=>{
+                         business logic
+                   }
+                   call the function
+                   ******************
+                   functionname(arg1,arg2,arg3, ......arg n);   
+
+
+
+
+            */
+        </script>
+        <!-- <script>
+            function test_func(){
+                document.write(`Welcome to function declaration`);
+            }
+            test_func();
+            
+        </script> -->
+
+        <!-- <script>
+            let test_func = function(){
+                document.write(`Welcome to function expression`);
+            }
+            test_func();
+        </script> -->
+
+        <!-- <script>
+            let test_func = ()=>{
+                document.write(`Welcome to arrow function`);
+             }
+            test_func();
+
+        </script> -->
+
+        <!-- <script>
+            let db_conn = ()=>{
+                document.write(`Reactjs comming soon`)
+            }
+            db_conn();
+
+        </script> -->
+
+        <!-- <script>
+            let db_conn = function(){
+                document.write(`Reactjs comming soon`)
+            }
+            db_conn();
+        </script> -->
+
+        <!-- <script>
+           function db_conn(){
+                document.write(`Reactjs comming soon`)
+            }
+            db_conn();
+        </script> -->
+
+        <!-- <script>
+            //function with parameter and no return type
+            let add = function(num1,num2){
+                let res = num1 + num2;
+                document.write(res);
+            }
+            add(200,100);
+
+        </script> -->
+
+         <!-- <script>
+            let add =(num1,num2)=>{
+                let res = num1 + num2;
+                document.write(res);
+            }
+            add(200,100);
+
+        </script> -->
+
+         <!-- <script>
+            function add(num1,num2){
+                let res = num1 + num2;
+                document.write(res);
+            }
+            add(200,100);
+
+        </script> -->
+
+        <!-- <script>
+            function sub(num1,num2){
+                let res = num1 - num2;
+                return res;
+            }
+            let x = sub(200,100);
+            document.write(x);
+
+        </script> -->
+
+        <!-- <script>
+            let sub = function (num1,num2){
+                let res = num1 - num2;
+                return res;
+            }
+            let x = sub(200,100);
+            document.write(x);
+
+        </script> -->
+
+        <!-- <script>
+            let sub =(num1,num2)=>{
+                let res = num1 - num2;
+                return res;
+            }
+            let x = sub(200,100);
+            document.write(x);
+
+        </script> -->
+
+        <!-- <script>
+            //arrow function
+            let multiplication = ()=>{
+                let num1 = 200;
+                let num2 = 100;
+                let res = num1 * num2
+                return res;
+
+            }
+            let x = multiplication();
+            document.write(x)
+        </script> -->
+
+        <!-- <script>
+            //function declaration
+            function multiplication(){
+                let num1 = 200;
+                let num2 = 100;
+                let res = num1 * num2
+                return res;
+
+            }
+            let x = multiplication();
+            document.write(x)
+        </script> -->
+
+        <!-- <script>
+            // function expression
+            let multiplication = function(){
+                let num1 = 200;
+                let num2 = 100;
+                let res = num1 * num2
+                return res;
+
+            }
+            let x = multiplication();
+            document.write(x)
+        </script> -->
+
+        <!-- <script>
+            //function expression
+            let division = function(){
+                let num1 = 200;
+                let num2 = 100;
+                let res = num1 / num2;
+                document.write(res);
+            }
+            division()
+        </script> -->
+
+        <!-- <script>
+            //function declaration
+            function division(){
+                let num1 = 200;
+                let num2 = 100;
+                let res = num1 / num2;
+                document.write(res);
+            }
+            division()
+        </script> -->
+
+        <!-- <script>
+            //arrow function
+            let  division  = ()=>{
+                let num1 = 200;
+                let num2 = 100;
+                let res = num1 / num2;
+                document.write(res);
+            }
+            division()
+        </script> 
+
+
+         //reading data from input box
+
+        //reading number from input field
+
+        //html
+        ******
+        <input type="number" id="num1" placeholder="enter num1">
+
+        <!-- JS*
+        *****
+        x = parseInt(document.getElementById("num1").value);
+        document.write(x)
+
+ 
+
+        html
+        ******
+        <input type="res" id="res" placeholder="result soon"> 
+
+        JS*
+        *****
+        document.getElementById("res").value = "Hello"; -->
+
+        <script>
+            //function declaration
+            function abc(){
+                a=100;
+                b=200;
+                let res = a + b;
+                return res;
+            }
+            let x = abc();
+            document.write(x);
+        </script>
+
+        <br>
+
+        <script>
+            //function expression
+            let xyz = function(){
+                c = 2;
+                b = 4;
+                let res = c * b;
+                document.write(res);
+            }
+            xyz();
+
+        </script>
+
+        <br>
+
+        <script>
+            //arrow function
+            let pas = ()=>{
+                d = 1000;
+                f = 300;
+                let res = d - f;
+                return res;
+            }
+            let o = pas();
+            document.write(o);
+
+        </script>
+        /*
+        HTML 
+        ******
+        <p id ="res">   </p>
+        JS
+        ******
+        document.getElementById("res").value="hello"
+
+
+        HANDLING CLICKING EVENT WITHOUT PARAMETERS
+
+
+        BUTTON1
+
+        HTML                                           JS
+        ***********                                   ***********
+        <button oneclick="func_one()">                 let func_one =()
+
+        HANDLING CLICK EVENT WITH PARAMETERS
+
+        BUTTON 2
+
+        HTML
+        *********
+        
+
+        </button>
+        */
+        
+        
+        
+
+
+
+        
+        
+    </body>
+</html>
+
+
+  

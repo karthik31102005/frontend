@@ -1,0 +1,477 @@
+<!-- <script>
+    let test_func = num1=>num1 * num2;
+    let res = test_func(10);
+    document.write(res);
+
+</script>  -->
+<!--
+function hoisting supports by "function declaration" and wont support by "function expression  " and arrow function
+-->
+<script>
+    /*
+            constructor functions
+            ***********************
+            constructor functions are used to create "onbjects"
+
+    */
+</script>
+
+<!--<script>
+    function class_one(){
+        this.num1 = 200;
+        this.num2 = 100;
+
+    }
+    let obj = new class_one();
+    let x  = obj.num1;
+    let y = obj.num2;
+    let add = x + y;
+    document.write(add);
+</script> -->
+
+<!-- script>
+    function class_one(){
+        this.getNum1 = function(){
+            return 200;
+
+        }
+        this.getNum2 = function(){
+            return 100;
+
+        }
+    }
+    let obj = new class_one();
+    let num1 = obj.getNum1();
+    let num2 = obj.getNum2();
+    let add = num1 + num2;
+    document.write(add);
+</script> -->
+
+<!-- <script>
+    function class_one(){
+        this.num1 = 200;
+
+        this.getNum1 = function(){
+            return this.num1;
+
+        }
+    }
+    let obj = new class_one();
+    let num1 = obj.getNum1();
+</script> -->
+
+<!-- <script>
+    function class_one(){
+
+    }
+    class_one.prototype.frontend = 'ReactJS'
+
+    let obj = new class_one();
+    let x = obj.fronted;
+    document.write(x);
+</script> -->
+
+
+<!--<script>
+    function class_one(){
+
+    }
+    class_one.prototype.getFrontend = function(){
+        return "ReactJS"
+
+    }
+    let obj = new class_one();
+    let res1 = obj.getFrontend();
+    document.write(res1);
+</script> -->
+
+<!--<script>
+    function class_one(){
+        class_one.prototype.num1 = 300;
+        function class_two(){}
+        class_two.prototype = Object.create(class_one.prototype);
+        class_two.prototype.num2 = 200;
+
+        function class_three(){}
+        class_three.prototype = Object.create(class_two.prototype);
+        class_three.prototype.num3 = 100;
+         
+        let obj = new class_three();
+        let x = obj.num1;
+    }
+</script> -->
+
+<!--<script>
+    function class_one(){}
+
+    
+    class_one.prototype.getFrontend = function(){
+        return "ReactJS";
+    }
+    function class_two(){}
+
+    
+    class_two.prototype.getFrontend = function(){
+        return "NodeJS";
+    }
+    let obj1 = new class_one();
+    let res1 = obj11.getFrontend();
+    document.write(res1);
+    let obj2 = new class_two();
+    let res2 = obj2.getFrontend();
+    document.write(res2);
+
+
+</script> -->
+<!--<script>
+    let func_one =(param1)=>{
+        param1();
+
+    }
+    func_one( ()=>{
+        document.write(`welcome to callback function !!!`);
+
+    } );
+</script>-->
+
+<!--<script>
+    let addition =(num,callback)=>{
+        callback(num+5,false);
+
+    }
+    let subtraction =(num,callback)=>{
+        callback(num-3,false);
+    }
+    let multiplication =(num,callback)=>{
+        callback(num*8,false);
+    }
+    addition(5,(addres,flag)=>{
+        if(!flag){
+            subtraction(addres,(subres,flag)=>{
+                if(!flag){
+                    multiplication(subres,(multires,flag)=>{
+                        if(!flag){
+                            document.write(multires)
+                        }
+                    }
+                }
+
+            })
+        
+            
+        }
+
+    });
+</script>-->
+<!--<script>
+    let promise1 = new Promise ((resolve,reject)=>{
+        resolve(`data from server soon,..!`);
+
+    })
+    promise1.then((posres)=>{
+        console.log(posres);
+    },(errres)=>{
+        console.log(errres);
+    
+
+    });
+
+
+    let consume = async ()=>{
+        let res = await promise1;
+        document.write(res);
+    }
+    consume();
+</script>-->
+
+<!--<script>
+    let addition = (num)=>{
+        return new Promise((reslove,reject)=>{
+            reslove(num + 5);
+            
+        })
+    }
+    let subtraction = (num)=>{
+        return new Promise((reslove,reject)=>{
+            reslove(num-3);
+
+
+        })
+    }
+    let consume = async ()=>{
+        let addres = await addition(5);
+        let subres = await subtraction(addres);
+        document.write(subres);
+    }
+    consume();
+</script>-->
+
+
+<!--<script>
+    let p1= new Promise((resolve,reject)=>{
+        resolve("Hello");
+
+    })
+    let p2 = new Promise((resolve,reject)=>{
+        reject("Err");
+
+    })
+     let p3 = new Promise((resolve,reject)=>{
+        resolve("JS !!!!!");
+
+
+    })
+    //Promise.all([p1,p2,p3]).then((posres)=>{
+    //    console.log(posres);
+    //},(errres)=>{
+    //   console.log(errres);
+    //});
+    Promise.allSettled([p1,p2,p3]).then((posres)=>{
+        console.log(posres);
+    },(errres)=>{
+        console.log(errres);
+    });
+
+    
+</script>-->
+
+<!--<script>
+    let p1 = new Promise((resolve,reject)=>{
+        setTimeout( ()=>{
+            resolve("Mysql Soon...")
+        }, 5000 );
+
+
+    });
+    let p2 = new Promise((resolve,reject){
+        setTimeout( ()=>{
+            resolve("Mysql Soon...")
+        }, 1000 );
+
+
+        
+    });
+    p1.then((posres)=>{
+        console.log(posres);
+    },(errres)=>{
+        console.log(errres)
+    }
+</script>-->
+
+
+
+
+
+<!--<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    $.ajax({
+        url:"http://www.w3schools.com/appml/customers.php",
+        method :"GET",
+        success : (posres)=>{
+            console.log(posres);
+
+        },
+        error : (errres)=>{
+            console.log(errres);
+        }
+
+    });
+</script>-->
+
+<!--<script>
+            $.ajax({
+                url : "https://www.w3schools.com/appml/customers.php",
+                method: "GET",
+                success : (posRes)=>{
+                    let obj = JSON.parse(posRes);
+                    let {records} = obj;
+                    document.write(`<table border="1" align="center" cellpadding="10" cellspacing="10">
+                        <tr>
+                            <th>CustomerName</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            </tr>`);
+                    records.forEach((element,index)=>{
+                        document.write(`<tr>
+                            <td>${element.CustomerName}</td>
+                            <td>${element.City}</td>
+                            <td>${element.Country}</td>
+                        </tr>`);
+                    });
+                    document.write(`</table`);
+        
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+        </script>-->
+
+
+<!--script>
+    /*
+    IIFE
+    ******
+               immidiate invokable functional expression 
+               when ever we define the function, it will invoke(execute) automatically
+               called as IIFE
+               IIFE, used to overcome global pollutaing issue
+               Syntax.
+               (function(param1,param2,param3,.....,param n){
+                   business logic
+               })(arg1,arg2,arg3,.......,arg n)
+               ((param1,param2,param3,.....,param n)=>{
+                       business logic
+                })(arg1,arg2,arg3,.......,arg n)
+    */
+</script> -->
+
+<!--<script>
+    (()=>{
+        document.write(`welcome to IIFE`);
+    })()
+</script>
+
+<script>
+    let res = (()=>{
+        return 100;
+    })()
+    document.write(res)
+</script>-->
+
+<!--script>
+    let res = ((num1)=>num1*num1)(100)
+    document.write(res);
+</script>-->
+
+<script>
+    /*
+     generator functions
+     *****************************8
+                   generator functions are used to 
+                   1)pause the execution 
+                   2)resume the execution
+                   3)read data value by value 
+                   usecase:
+                   1)async flows
+                   2)lazy loading
+
+                   generator functions starts with "*"
+                   yield is the keyword , used to pause the execution 
+                   next() is the function ,used to resume the execution 
+
+    */
+
+</script>
+
+
+<!--<script>
+    function *test_func(){
+        yield 100;
+        yield 200;
+        yield 300;
+
+    }
+    let cursor = test_func();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+
+</script>-->
+
+<!--script>
+    function *test_func1(){
+        yield 1000;
+        yield*func_one2();
+        yield 3000;
+    }
+    function *func_one2(){
+        yield 2000;
+    }
+    
+    let cursor = test_func1();
+    //console.log( cursor.next() );
+    //console.log( cursor.next() );
+    //console.log( cursor.next() );
+    //console.log( cursor.next() );
+    for (let i=0,i<=3,i++){
+        console.log(cursor.next());
+
+    }
+
+</script>-->
+
+<!--script>
+    function*test_func(){
+        yield 10000;
+        yield 20000;
+        return 30000;
+        yield 40000;
+
+    }
+    let cursor = test_func();
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+
+</script-->
+
+
+<!--script>
+    /* 
+      HOF (Higher order functions)
+      *****************************8
+
+      in HOF we will 
+      1) pass one function definition to another 
+    */
+</script-->
+
+
+<!--script>
+    let outer = (num1)=>{
+        return (num2)=>{
+            return num1*num2;
+
+        }
+    }
+    let inner =outer(200);
+    let res = inner (100);
+    document.write(res);
+</script-->
+
+<!--script>
+    let test_func1=(param1)=>{
+        param1();
+    }
+    test_func1( ()=>{ 
+        document.write(`welcome to hof`);
+    });
+</script-->
+
+<!--script>
+    /*
+    pure function
+    ****************
+           output
+
+    
+    */
+</script-->
+
+<script>
+    let res = 0;
+    let add = (num1,num2) =>{
+        res = res+num1+num2;
+        return res;
+    }
+    document.write( add(2,3), `<br>`);
+    document.write( add(2,3) );
+
+</script>
+
+
