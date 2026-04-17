@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ARRAY MANIPULATION</title>
+    </head>
+    <body>
+        <!--script>
+            /*
+            ARRAY MANIPULATION
+            **********************
+                COLECTION OF INDEXED  ELEMENTS CALLED AS ARRAY
+                INDEX STARTS FROM '0'
+                WE WILL REPRESENT WITH THE HELP OF '[]'
+                WE WILL ACCESS THE ARRAY THE ELEMENTS WITH HELP OF "INDEXES"
+            */
+        </script-->
+
+        <!--script>
+            let arr1 = [10,20,30,40,50];
+            let e1 = arr1[0];
+            let e2 = arr1[1];
+            let e3 = arr1[2];
+            let e4 = arr1[3];
+            document.write(e1);
+            document.write(e2);
+            document.write(e3);
+            document.write(e4);
+            
+            //at()- used to access elements with help of positive and negative indexes
+            
+            let  e5 = arr1.at(-1);
+            let e6 = arr1.at(-3);
+            document.write(e5, e6);
+        </script-->
+        
+        <!--script>
+            /*
+            some()- if atleast one element satisifies the condition it will return true otherwise false 
+
+
+            */
+           let arr1=[10,20,30,40,50];
+           let flag = arr1.some((element,index)=>{
+               return element<=10;
+           });
+           document.write(flag);
+           let flag1 = arr1.some((element,index)=>{
+               return element<10;
+           });
+           document.write(flag1);
+        </script-->
+        <!--script>
+            /*
+            every()- if all element satisifies the condition it will return true otherwise false 
+
+
+            */
+           let arr1=[10,20,30,40,50];
+           let flag = arr1.every((element,index)=>{
+               return element<=50;
+           });
+           document.write(flag);
+           let flag1 = arr1.every((element,index)=>{
+               return element<50;
+           });
+           document.write(flag1);
+        </script-->
+        <!--script>
+            /*
+            map()- map() function used to manipulate every element in array
+                   map() relaesed in ES6
+                   map() function called as higher order function(HOF)
+                   map() function will return new array
+                   map() is immutable function 
+            */
+        </script-->
+        <!--script>
+            let arr1=[10,20,30,40,50];
+            let new_arr = arr1.map((element,index)=>{
+                return element*10;
+            });
+            console.table(new_arr);
+            console.log(arr1)
+        </script-->
+        <!--script>
+            /*
+            filter()- filter() function used to apply conditions 
+                   filter() relaesed in ES6
+                   filter() function called as higher order function(HOF)
+                   filter() function will return new array
+                   filter() is immutable function 
+            */
+        </script-->
+        <!--script>
+             let arr1=[1,2,3,4,5];
+            let new_arr = arr1.filter((element,index)=>{
+                return element>=3;
+            });
+            console.log(new_arr);
+            
+
+        </script-->
+        <!--script>
+            /*
+            reduce()- reduce() function used to find the sum of  array elements 
+                   reduce() relaesed in ES6
+                   reduce() function called as higher order function(HOF)
+                   reduce() function will return "array 
+                   reduce() is immutable function 
+            */
+           
+             let arr1=[10,20,30,40,50];
+            let sum1 = arr1.reduce((FirstElement,nextElement)=>{
+                return FirstElement+nextElement;
+            });
+            document.write(sum1);
+            
+            let sum2 = arr1.reduce((FirstElement,nextElement)=>{
+                return FirstElement+nextElement;
+            },150);
+            document.write(sum2);
+
+        </script-->
+        <!--script>
+             /*
+            reduceRight()- reduce() function used to co concatination from right to lefty
+
+            */
+             let arr1=[`JS`,"TO",`WELCOME`];
+            let res = arr1.reduceRight((FirstElement,nextElement)=>{
+                return FirstElement+" "+nextElement;
+            });
+            document.write(res);
+
+        </script-->
+        <!--script>
+            let arr1=[20,30,40];
+            document.write(arr1,"<br>");
+
+            arr1.push(50)
+            document.write(arr1,"<br>");
+
+            arr1.unshift(10)
+            document.write(arr1,"<br>");
+
+            arr1.pop(50)
+            document.write(arr1,"<br>");
+
+            arr1.shift(10)
+            document.write(arr1,"<br>");
+        </script-->
+        <!--script>
+            /*
+            push:used to add element at the end of the array
+            unshift:add element at the beginning of the array
+            pop:deletes element from the end of existing array
+            shift:deletes element from the begin of the existing array
+            */
+            let arr1=[20,30,40];
+            console.log(arr1);
+            
+            arr1.push(50);
+            console.log(arr1);
+
+            arr1.unshift(10);
+            console.log(arr1);
+
+           arr1.pop(50);
+           console.log(arr1);
+
+           arr1.shift(10);
+           console.log(arr1);
+        </script-->
+        <!--script>
+            /*splice()
+                used to add/remove elements from any index
+                mutable
+            */
+        let arr1=[10,20,30,40,50,60,70,80,90,100];
+        arr1.splice(4,3);
+        console.log(arr1);
+
+        arr1.splice(4,2);
+        console.log(arr1);
+
+        arr1.splice(0,1);
+        console.log(arr1);
+
+        arr1.splice(0,1,10,20);
+        console.log(arr1);
+
+        arr1.splice(4,0,50,60,70,80,90,100);
+        console.log(arr1);
+
+        </script-->
+        <!--script>
+            /*
+            slice
+                used to choose elements from array
+                immutable
+            */
+        let arr1=[10,20,30,40,50,60,70,80,90,100];
+        console.log(arr1.slice(4,7));
+        console.log(arr1.slice(0,1));
+        console.log(arr1.slice(9));
+        console.log(arr1.slice(5).concat(arr1.slice(0,5)));
+        </script-->
+        <!--script>
+            /*
+            findindex()
+                used to find the index of an element in array
+                if element found it will return index value
+                if element not found return -1
+            */
+        </script-->
+        <!--script>
+            let arr1=[10,20,30,40,50,60,70,80,90,100];
+            let i1 = arr1.findIndex((element,index)=>{
+                return element == 50;
+        });
+        console.log(i1);
+        let i2 = arr1.findIndex((element,index)=>{
+            return element == 100;
+        });
+        console.log(i2);
+        let i3 = arr1.findIndex((element,index)=>{
+                return element == 1000;
+        });
+        console.log(i3);
+
+        arr1.splice(arr1.findIndex((element,index)=>{
+            return element == 60;
+        }),1);
+        console.log(arr1);
+
+        </script-->
+        <!--script>
+            /*
+            Includes
+                used to perform search operation
+                boolean function
+            */
+        let arr1 = [10,20,30,40,50,60,70,80,90,100];
+        console.log(arr1.includes(50));
+        console.log(arr1.includes(500));
+        </script-->
+        <!--script>
+            /*
+            find()
+                used to perform search operation
+                this is number function
+                if element found it will return number otherwise undefined
+            */
+        let arr1 = [10,20,30,40,50,60,70,80,90,100];
+        console.log(
+            arr1.find((element,index)=>{
+                return element == 50;
+            })
+        );
+        console.log(
+            arr1.find((element,index)=>{
+                return element == 500;
+            })
+        );
+        </script-->
+        <!--script>
+            /*
+               trim()-used to remove white spaces from beginning and ending of a string
+               trimStart()-used to remove white spacing from beginning of string
+               trimEnd()-used to remove white spaces at ending of string
+            */
+        let str= " hello ";
+        console.log(str.trim().length);
+        console.log(str.trimStart().length);
+        console.log(str.trimEnd().length);
+
+        </script-->
+        <!--script>
+            /*  padStart() - add required charcters at the beginning of string
+                padEnd() - add required characters at the ending of string
+            */
+           let str = "hello";
+           console.log( str.padStart(10,"").padEnd(15,""));
+        </script-->
+
+        <!--script>
+            /*
+            length
+            ********
+                   used to find the "number of elements" from array
+                                   (or)
+                   used to find the "number of characters" from string
+            */
+
+            let arr1=[10,20,30,40,50];
+            //let n = arr1.length;
+            arr1.length=3;
+            document.write(arr1[1]);
+            //document.write(n);
+
+
+
+        </script-->
+        <!--script>
+            /*
+            delete
+            ********
+                   used to find delete an element from array
+                                   
+                   memory not released after deleting the element 
+
+            */
+           let arr1 =[1,2,3,4,5];
+           delete arr[0]
+           console.log(arr1.length);
+           
+        </script-->
+        <!--script>
+            /*
+            sort 
+            ****
+            used to implement either ascending order or descending order
+            */
+           let arr1=[10,20,50,40,30];
+           let new_arr1 = arr1.sort((num1,num2)=>{
+               return num1 - num2; // num2-num1 foe descending 
+            
+
+               
+           })
+           console.log(new_arr1);
+           console.log("First Min elements : ", new_arr1[0]);
+           console.log("second Min elements : ", new_arr1[1]);
+           console.log("First Man elements : ", new_arr1[4]);
+           console.log("second  Max elements : ", new_arr1[new_arr1.length-2]);
+
+        </script-->
+        <!--script>
+            /*
+              reverse
+              ************
+              used to reverse the array element
+
+            */
+           let arr1=[10,20,30,40,50];
+           console.log(arr1.reverse);
+        </script-->
+        <!--script>
+            /*
+              Array.from() & split() - used to convert string to char array
+              replace() & replaceAll() - used to replace one character to another character 
+              replace() - will replace the first occerance \
+              replaceAll() - will replace all occurance
+              toString() & split() - convert char array to string
+
+
+            */
+           console.log(
+                Array.from("hello").reverse().toString().replace(",","")
+
+           );
+           console.log(
+                Array.from("flight").reverse().toString().replaceAll(",","")
+
+           );
+           console.log(
+                "NodeJS".split().reverse().join("")
+           );
+        </script-->
+
+        <!--script>
+            let arr1 =["HTML","CSS","JAVASCRIPT","NODEJS","REACT"]
+            let new_arr1= arr1.map((element,index)=>{
+                return element.split("").reverse().join("")
+            });
+            console.log(new_arr1)
+        </script-->
+        <!--script>
+            /*
+            used to extract the substring
+            */
+           let str ="welcome to javascript";
+           console.log( str.substr(0,7) );
+           console.log( str.substr(9,2) );
+           console.log( str.substr(12,10) );
+        </script>
+        <script>
+            /*
+            substring(starting_index,ending_index)
+
+            */
+           let str1 = "welcome to javascript";
+           console.log(str1.substring(0,7));
+        </script-->
+        <!--script>
+            /*
+            flat()
+            *******
+               used to convert multi-dimensional array to single dimensional array
+            */
+           let String = [[[[[[1]]]]],2,[[[[[[3]]]]]]]
+           console.log(String.flat(Infinity))
+
+        </script-->
+        <!--script>
+            /*
+            flatmap(): combination of flat() and map()
+
+            */
+           let arr1 =[1,2,3];
+           let arr2 =["one","two", "three"];
+           let arr3 = ["एकटा","दू","तीन"];
+           let new_arr = arr1.flatMap((element,index)=>{
+               return (element,arr2[index],arr3[index])
+           });
+           console.log(new_arr);
+        </script-->
+        <!--script>
+            let arr1=[10,20,30,40,50,60,70,80,90,100];
+            arr1.copyWithin(2,5);
+            console.log(arr1);
+            let arr2=[10,20,30,40,50,60,70,80,90,100];
+            arr1.copyWithin(3,7);
+            console.log(arr2);
+        </script-->
+        <!--script>
+            let arr1 =[10,10,10,10,10];
+            console.log(
+                arr1.fill(20,1).fill(30,2,4).fill(40,3,4).fill(50,4)
+            );
+        </script-->
+        <!-- <script>
+            let str ="Hello";
+            console.log( str.repeat(10) );
+        </script> -->
+        <!-- <script>
+
+            let arr1 = [10,20,30,40,50];
+            let i =0;
+            while(arr1.length>i){
+                document.write(arr1[i],"<br>");
+                i++;
+            }
+        </script> -->
+        <!-- <script>
+            /*
+               do while() loop
+               *************
+               without checking the condition , we will excute businness logic at least once called as do while() loop
+               syntax:
+                      initialization
+                do{
+                   business logic 
+                   increment/decrement
+                } while(condition)
+            */
+           let arr1 = [10,20,30,40,50];
+           let i =0;
+           do{
+            document.write(arr1[i],"<br>");
+            i++;
+           }while(i<arr1.length);
+
+        </script> -->
+        <!-- <script>
+            /* for() loop
+              for (initlization;condition;increement/decrement){
+                  business logic
+              
+              }
+
+            */
+           let arr1 =[10,20,30,40,50];
+           for(let i=0;i<arr1.length;i++){
+            document.write(arr1[i])
+           }
+        </script> -->
+
+        <!-- <script>
+            /*
+            forEach() loop
+            */
+           let arr1 = [10,20,30,40,50];
+           arr1.forEach((element,index)=>{
+            document.write(element,"<br>")
+           });
+        </script> -->
+        <!-- <script>
+            let obj ={
+                key1 : 100,
+                key2 : 200
+
+            };
+            for (let key in obj){
+                document.write(obj[key])
+            }
+        </script> -->
+
+        
+
+
+
+
+
+
+
+
+    </body>
+</html>
